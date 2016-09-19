@@ -13,7 +13,7 @@
 #
 # Pull base image
 # ---------------
-FROM oracle/oud:11123
+FROM oracle/oud:11.1.2.3.0
 
 # Maintainer
 # ----------

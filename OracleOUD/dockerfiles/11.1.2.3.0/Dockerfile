@@ -18,15 +18,13 @@
 # ----------------------------------
 # (1) ofm_oud_generic_11.1.2.3.0_disk1_1of1.zip
 #     Download from http://www.oracle.com/technetwork/middleware/id-mgmt/downloads/oid-11gr2-2104316.html
-# (2) server-jre-8uXX-linux-x64.tar.gz
-#     Download from http://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html
 #
 # HOW TO BUILD THIS IMAGE
 # -----------------------
 # Put all downloaded files in the same directory as this Dockerfile
 # As root user run following command manually:
 #
-#     $ sh buildDockerImage.sh -v 11.1.2.3.0  
+#     $ sh buildDockerImage.sh -v 11.1.2.3.0
 #
 # Alternatively you can also run
 #
@@ -51,7 +49,7 @@ USER root
 ENV OUD_PKG=ofm_oud_generic_11.1.2.3.0_disk1_1of1.zip \
     OUD_BIN=Disk1/runInstaller \
     ORACLE_HOME=/u01/oracle/oudssa \
-    USER_MEM_ARGS="-Djava.security.egd=file:/dev/./urandom" \ 
+    USER_MEM_ARGS="-Djava.security.egd=file:/dev/./urandom" \
     PATH=$PATH:/usr/sbin:$JAVA_HOME/bin:$ORACLE_HOME/oracle_common/common/bin
 
 # Copy packages to the new drive
@@ -78,12 +76,12 @@ RUN yum install -y \
 # Install and configure Oracle JDK
 # Go to /u01 as user 'oracle' to proceed with OUD installation
 #--------------------------------------------------------
-#  
+#
 
 RUN cd /u01 && unzip -q /u01/$OUD_PKG && \
-    chown oracle:oracle -R /u01 
+    chown oracle:oracle -R /u01
 
-RUN su -c "/u01/$OUD_BIN -ignoreSysPrereqs -waitforcompletion -novalidation -silent -responseFile /u01/install.file -jreLoc $JAVA_HOME -invPtrLoc /u01/oraInst.loc ORACLE_HOME=$ORACLE_HOME" - oracle 
+RUN su -c "/u01/$OUD_BIN -ignoreSysPrereqs -waitforcompletion -novalidation -silent -responseFile /u01/install.file -jreLoc $JAVA_HOME -invPtrLoc /u01/oraInst.loc ORACLE_HOME=$ORACLE_HOME" - oracle
 
 RUN cd /u01 && rm $OUD_PKG oraInst.loc install.file readme_idm_r2ps3.htm
 
