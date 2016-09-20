@@ -10,6 +10,7 @@ The resulting images will have an instance pre-configured. A set of sample data 
 
 Go to the folder  : OracleOUD/samples/11123-oud
 Run the following command:
+
 $ sh build.sh
 
 
@@ -17,7 +18,7 @@ $ sh build.sh
 
 IMPORTANT: You have to build the OUD Instance Image before this.
 
-docker run -d -p <non ssl port>:1389 -p <ssl port>:1636 --name oud_ldap sampleoud:11.1.2.3.0 startOUD.sh
+docker run -d -p (non ssl port):1389 -p (ssl port):1636 --name oud_ldap sampleoud:11.1.2.3.0 startOUD.sh
 
 Eg: docker run -d -p 2389:1389 -p 2636:1636 --name oud_ldap sampleoud:11.1.2.3.0 startOUD.sh
 
