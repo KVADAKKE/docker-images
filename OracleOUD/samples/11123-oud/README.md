@@ -9,6 +9,7 @@ IMPORTANT: You have to build the OUD Install Image before this.
 The resulting images will have an instance pre-configured. A set of sample data also will be available.
 
 Go to the folder  : OracleOUD/samples/11123-oud
+
 Run the following command:
 
 $ sh build.sh
