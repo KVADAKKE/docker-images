@@ -30,6 +30,10 @@ Run the following command:
 
 $ sh buildDockerImage.sh -v 11.1.2.3.0
 
+Or Run the following command:
+
+docker build --force-rm=true --no-cache=true --build-arg="http_proxy=http://www-proxy.us.oracle.com:80" -t oracle/oud:11123 .
+
 ##Samples for OUD Instance Creation
 
 To give users an idea on how to create an OUD instance from a custom Dockerfile to extend the OUD Install image, we provide a few samples. An example, you can use the sample inside samples/11123-oud folder for creating OUD Instance and for sample data population.
@@ -47,8 +51,11 @@ Run the following command:
 
 $ sh build.sh
 
-##OUD Docker Run - To create a container with OUD Instance 
+or Run the following command:
 
+docker build --force-rm=true --no-cache=true --build-arg="http_proxy=http://www-proxy.us.oracle.com:80" -t sampleoud:11123 .
+
+##OUD Docker Run - To create a container with OUD Instance 
 
 IMPORTANT: You have to build the OUD Instance Image before this.
 

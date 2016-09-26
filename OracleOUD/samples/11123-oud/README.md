@@ -14,6 +14,9 @@ Run the following command:
 
 $ sh build.sh
 
+or Run the following command:
+
+docker build --force-rm=true --no-cache=true --build-arg="http_proxy=http://www-proxy.us.oracle.com:80" -t sampleoud:11123 .
 
 ##OUD Docker Run - To create a container with OUD Instance 
 

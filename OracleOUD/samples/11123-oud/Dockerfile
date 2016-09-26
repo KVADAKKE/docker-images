@@ -57,6 +57,9 @@ RUN $ORACLE_HOME/oud-setup --cli --no-prompt -Q -p $OUD_PORT --adminConnectorPor
 #Expose all Ports
 EXPOSE $OUD_PORT $LDAPS_PORT $adminConnectorPort
 
+USER root
+RUN chmod 777 /u01/scripts/*.*
+
 # Final setup
 USER oracle
 WORKDIR /u01/scripts
