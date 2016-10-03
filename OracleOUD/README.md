@@ -46,11 +46,12 @@ The resulting images will have an instance pre-configured. A set of sample data 
 
 1. Go to the folder: OracleOUD/samples/11123-oud
 2. Run the following command:
-    $ sh build.sh
 
-    Or Run the following command:
+        $ sh build.sh
 
-    docker build --force-rm=true --no-cache=true --build-arg="http_proxy=http://www-proxy.us.oracle.com:80" -t sampleoud:11.1.2.3.0 .
+        Or Run the following command:
+
+        docker build --force-rm=true --no-cache=true --build-arg="http_proxy=http://www-proxy.us.oracle.com:80" -t sampleoud:11.1.2.3.0 .
 
 ## Start an OUD container
 
