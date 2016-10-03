@@ -51,10 +51,12 @@ The resulting images will have an instance pre-configured. A set of sample data 
 ## Start an OUD container
 
 **IMPORTANT:** You have to build the OUD Instance Image before this.
+
     docker run -d -p (non ssl port):1389 -p (ssl port):1636 --name oud_ldap sampleoud:11.1.2.3.0 startOUD.sh
 
 Example:
     docker run -d -p 2389:1389 -p 2636:1636 --name oud_ldap sampleoud:11.1.2.3.0 startOUD.sh
+
 
 
 # Copyright
