@@ -28,7 +28,7 @@ In order to build the install image execute buildDockerImage.sh file under docke
 1. Go to the folder: `OracleOUD/dockerfiles`
 2. Run the following command:
     $ sh buildDockerImage.sh -v 11.1.2.3.0
-    Or Run the following command:   
+    Or Run the following command:
     docker build --force-rm=true --no-cache=true --build-arg="http_proxy=http://www-proxy.us.oracle.com:80" -t oracle/oud:11.1.2.3.0 .
 
 ## Samples for OUD Instance Creation
