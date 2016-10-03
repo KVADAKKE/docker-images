@@ -48,7 +48,7 @@ The resulting images will have an instance pre-configured. A set of sample data 
 1. Go to the folder: OracleOUD/samples/11123-oud
 2. Run the following command:
 
-        $ sh build.sh
+        $ ./build.sh
 
         Or Run the following command:
 
