@@ -1,0 +1,52 @@
+dn:ou=Users,dc=us,dc=oracle,dc=com
+ou:Users
+objectClass:top
+objectClass:organizationalUnit
+
+dn:ou=UserGroups,dc=us,dc=oracle,dc=com
+ou:Groups
+objectClass:top
+objectClass:organizationalUnit
+
+dn: cn=user1,ou=Users,dc=us,dc=oracle,dc=com
+objectclass: inetOrgPerson
+givenname: user1
+sn: user1
+cn: user1
+uid: user1
+userpassword: welcome1
+mail: user1@oracle.com
+
+dn: cn=user2,ou=Users,dc=us,dc=oracle,dc=com
+objectclass: inetOrgPerson
+cn: user2
+sn: user2
+uid: user2
+userpassword: welcome1
+carlicense: abcd
+homephone: 555-111-2222
+mail: user2@oracle.com
+description: user2@oracle
+ou: Development Department
+
+
+dn: cn=kk1,ou=Users,dc=us,dc=oracle,dc=com
+objectclass: inetOrgPerson
+cn: kk1
+sn: kk1
+uid: kk1
+userpassword: welcome1
+carlicense: abcd
+homephone: 555-111-2222
+mail: kk1@oracle.com
+description: kk1@oracle
+ou: Development Department
+
+
+dn: cn=Administrators,ou=UserGroups,dc=us,dc=oracle,dc=com
+objectclass: groupOfNames
+objectclass: top
+member: cn=testuser1,ou=Users,dc=us,dc=oracle,dc=com
+member: cn=testuser2,ou=Users,dc=us,dc=oracle,dc=com
+member: cn=kk,ou=Users,dc=us,dc=oracle,dc=com
+cn: Administrators
